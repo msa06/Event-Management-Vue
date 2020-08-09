@@ -7,6 +7,13 @@ import camelCase from 'lodash/camelCase'
 
 Vue.config.productionTip = false
 
+// Vue Filter to Capatlise
+Vue.filter('capitalize', function(value) {
+  if (!value) return ''
+  value = value.toString()
+  return value.charAt(0).toUpperCase() + value.slice(1)
+})
+
 const requireComponent = require.context(
   // The relative path of the components folder
   './components',
