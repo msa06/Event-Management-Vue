@@ -8,7 +8,6 @@
         rel="prev"
         >Prev Page</router-link
       >
-      |
       <template v-if="hasNextPage"> | </template>
     </template>
     <router-link
@@ -23,6 +22,7 @@
 <script>
 import EventCard from '@/components/EventCard.vue'
 import { mapState } from 'vuex'
+
 export default {
   name: 'EventList',
   components: {
@@ -36,6 +36,7 @@ export default {
       page: this.page
     })
   },
+
   computed: {
     page() {
       return parseInt(this.$route.query.page) || 1

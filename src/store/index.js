@@ -67,8 +67,8 @@ export default new Vuex.Store({
           throw err
         })
     },
-    fetchEvents({ commit, dispatch }, { perPage, page }) {
-      EventService.getEvents(perPage, page)
+    fetchEvents({ commit, dispatch, state }, { perPage, page }) {
+      return EventService.getEvents(perPage, page)
         .then(res => {
           commit('SET_EVENTS_TOTAL', parseInt(res.headers['x-total-count']))
           commit('SET_EVENTS', res.data)
@@ -81,24 +81,16 @@ export default new Vuex.Store({
           dispatch('addNotification', notification)
         })
     },
-    fetchEvent({ commit, dispatch, getters }, id) {
+    fetchEvent({ commit, getters }, id) {
       var event = getters.getEventByID(id)
       if (event) {
         commit('SET_EVENT', event)
         return event
       } else {
-        return EventService.getEvent(id)
-          .then(res => {
-            commit('SET_EVENT', res.data)
-            return res.data
-          })
-          .catch(err => {
-            const notification = {
-              type: 'error',
-              message: 'There was a problem fetching event: ' + err.message
-            }
-            dispatch('addNotification', notification)
-          })
+        return EventService.getEvent(id).then(res => {
+          commit('SET_EVENT', res.data)
+          return res.data
+        })
       }
     },
     addNotification({ commit }, notification) {
