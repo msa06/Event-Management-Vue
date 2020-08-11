@@ -220,19 +220,52 @@
       "id": 10,
       "category": "animal welfare",
       "organizer": {
-        
         "user": {
           "id": "abc123",
           "name": "Adam Jahr"
         }
       },
-     
       "title": "Gregg's Event",
       "description": "We'll do stuff",
       "location": "Your House",
       "date": "",
       "time": "",
-  
+      "attendees": []
+    },
+    {
+      "id": 8482449,
+      "user": {
+        "id": "msa",
+        "name": "Suhaib"
+      },
+      "category": "",
+      "organizer": {
+        "id": "msa",
+        "name": "Suhaib"
+      },
+      "title": "Sucess",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
+      "attendees": []
+    },
+    {
+      "id": 6227477,
+      "user": {
+        "id": "msa",
+        "name": "Suhaib"
+      },
+      "category": "",
+      "organizer": {
+        "id": "msa",
+        "name": "Suhaib"
+      },
+      "title": "Success",
+      "description": "",
+      "location": "",
+      "date": "",
+      "time": "",
       "attendees": []
     }
   ]

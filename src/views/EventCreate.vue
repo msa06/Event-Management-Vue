@@ -76,7 +76,6 @@ export default {
   },
   methods: {
     createEvent() {
-      console.log('Event is Here', this.event)
       this.$store
         .dispatch('createEvent', this.event)
         .then(() => {
@@ -86,9 +85,7 @@ export default {
           })
           this.event = this.createFreshEventObject()
         })
-        .catch(() => {
-          console.log('there is a problem in creating event')
-        })
+        .catch(() => {})
     },
     createFreshEventObject() {
       const user = this.$store.state.user

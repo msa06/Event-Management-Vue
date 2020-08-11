@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Events for {{ user.user.name }}</h1>
+    <h1 v-if="user">Events for {{ user.name }}</h1>
     <EventCard v-for="event in events" :key="event.id" :event="event" />
     <template v-if="page != 1">
       <router-link
@@ -24,6 +24,7 @@
 import EventCard from '@/components/EventCard.vue'
 import { mapState } from 'vuex'
 export default {
+  name: 'EventList',
   components: {
     EventCard
   },
