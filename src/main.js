@@ -6,17 +6,16 @@ import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import 'nprogress/nprogress.css'
 import Vuelidate from 'vuelidate'
+import DateFilter from './filters/date'
+import CapitalizeFilter from './filters/capitalize'
 
 Vue.use(Vuelidate)
 
 Vue.config.productionTip = false
 
 // Vue Filter to Capatlise
-Vue.filter('capitalize', function(value) {
-  if (!value) return ''
-  value = value.toString()
-  return value.charAt(0).toUpperCase() + value.slice(1)
-})
+Vue.filter('date', DateFilter)
+Vue.filter('capitalize', CapitalizeFilter)
 
 const requireComponent = require.context(
   // The relative path of the components folder

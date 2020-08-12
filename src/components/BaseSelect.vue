@@ -7,7 +7,7 @@
         :key="option"
         v-on="$listeners"
         :selected="option === value"
-        >{{ option }}</option
+        >{{ option | capitalize }}</option
       >
     </select>
   </div>
