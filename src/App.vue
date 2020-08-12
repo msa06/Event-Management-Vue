@@ -108,6 +108,7 @@ small {
 .-text-error {
   color: tomato;
 }
+
 .-text-gray {
   color: rgba(0, 0, 0, 0.5);
 }
@@ -145,6 +146,9 @@ textarea {
 button,
 input {
   overflow: visible;
+}
+.error {
+  border: 1px solid red;
 }
 button,
 select {

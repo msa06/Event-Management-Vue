@@ -339,6 +339,24 @@
       "date": "",
       "time": "",
       "attendees": []
+    },
+    {
+      "id": 4625740,
+      "user": {
+        "id": "msa",
+        "name": "Suhaib"
+      },
+      "category": "education",
+      "organizer": {
+        "id": "msa",
+        "name": "Suhaib"
+      },
+      "title": "Study Group",
+      "description": "Chem",
+      "location": "My place",
+      "date": "2020-08-13T10:00:00.000Z",
+      "time": "4:00",
+      "attendees": []
     }
   ]
 }
